@@ -51,7 +51,7 @@ provider "google" {
 # we establish
 variable "management_network_cidr" {
   type = string
-  default = "192.168.1.0/24"
+  default = "192.168.56.0/24"
 }
 variable "public_network_cidr" {
   type = string
@@ -247,7 +247,7 @@ resource "google_compute_instance" "controller" {
     # This is the management interface, attached to our management network
     network       = google_compute_network.management-vpc.self_link
     subnetwork    = google_compute_subnetwork.management-subnetwork.self_link
-    network_ip    = "192.168.1.11"
+    network_ip    = "192.168.56.11"
   }
 
 } 
@@ -282,7 +282,7 @@ resource "google_compute_instance" "network" {
     # This is the management interface, attached to our management network
     network       = google_compute_network.management-vpc.self_link
     subnetwork    = google_compute_subnetwork.management-subnetwork.self_link
-    network_ip    = "192.168.1.12"
+    network_ip    = "192.168.56.12"
   }
 
   network_interface {
@@ -314,7 +314,7 @@ resource "google_compute_instance" "compute" {
     # This is the management interface, attached to our management network
     network       = google_compute_network.management-vpc.self_link
     subnetwork    = google_compute_subnetwork.management-subnetwork.self_link
-    network_ip    = "192.168.1.2${count.index+1}"
+    network_ip    = "192.168.56.2${count.index+1}"
   }
 
   network_interface {
@@ -356,7 +356,7 @@ resource "google_compute_instance" "storage" {
     # This is the management interface, attached to our management network
     network       = google_compute_network.management-vpc.self_link
     subnetwork    = google_compute_subnetwork.management-subnetwork.self_link
-    network_ip    = "192.168.1.31"
+    network_ip    = "192.168.56.31"
    }
 }
 

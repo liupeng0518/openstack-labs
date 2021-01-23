@@ -102,10 +102,13 @@
     name: glance-api
     state: restarted
 - name: Download CirrOS image
-  get_url:
+  # get_url:
+  #   dest: "{{install_user_home}}/cirros-0.4.0-x86_64-disk.img"
+  #   force: no
+  #   url: "{{cirros_download_url}}/cirros-0.4.0-x86_64-disk.img"
+  copy:
+    src: cirros-0.4.0-x86_64-disk.img
     dest: "{{install_user_home}}/cirros-0.4.0-x86_64-disk.img"
-    force: no
-    url: "{{cirros_download_url}}/cirros-0.4.0-x86_64-disk.img"
 - name: Upload image into glance
   os_image:
     auth:

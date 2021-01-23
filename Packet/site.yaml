@@ -88,7 +88,7 @@
       debug:
         msg: | 
           Done. To connect to the Horizon dashboard, run an SSH tunnel using 
-          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i {{userPrivateKeyFile}} -L 2080:192.168.1.11:80  stack@{{hostvars.stack1.ansible_ssh_host}} 
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i {{userPrivateKeyFile}} -L 2080:192.168.56.11:80  stack@{{hostvars.stack1.ansible_ssh_host}} 
           and point your browser to localhost:2080/horizon. The password for the demo user is 
           {{OS_DEMO_PASSWORD}}
           The password for the admin user is
