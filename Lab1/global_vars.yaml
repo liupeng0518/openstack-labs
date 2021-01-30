@@ -12,7 +12,7 @@ install_user_home: "/home/vagrant"
 cirros_download_url: "http://download.cirros-cloud.net/0.4.0/"
 # Name of the unnamed device (i.e. with no IP address assigned) that we will
 # use for the VM network
-vm_network_device: enp0s9
+vm_network_device: eth2
 # The name of the SSH key that we will create and use for the virtual
 # machines spawned by OpenStack
 ssh_key_name: demo-key

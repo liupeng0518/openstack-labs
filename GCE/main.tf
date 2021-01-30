@@ -60,7 +60,7 @@ variable "public_network_cidr" {
 
 variable "underlay_network_cidr" {
   type = string
-  default = "192.168.2.0/24"
+  default = "192.168.58.0/24"
 }
 
 # The number of compute  nodes that we use
@@ -289,7 +289,7 @@ resource "google_compute_instance" "network" {
     # This is the underlay interface, attached to our management network
     network       = google_compute_network.underlay-vpc.self_link
     subnetwork    = google_compute_subnetwork.underlay-subnetwork.self_link
-    network_ip    = "192.168.2.12"
+    network_ip    = "192.168.58.12"
   }
 
 } 
@@ -321,7 +321,7 @@ resource "google_compute_instance" "compute" {
     # This is the underlay interface, attached to our management network
     network       = google_compute_network.underlay-vpc.self_link
     subnetwork    = google_compute_subnetwork.underlay-subnetwork.self_link
-    network_ip    = "192.168.2.2${count.index+1}"
+    network_ip    = "192.168.58.2${count.index+1}"
   }
 
 }

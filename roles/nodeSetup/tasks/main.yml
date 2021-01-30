@@ -61,7 +61,11 @@
     label: "{{ item[0] }}"
 
 
-
+- name: set china apt source
+  shell:
+    # systemctl  stop systemd-resolved.service
+    # systemctl  disable systemd-resolved.service
+    sed -i 's/us.archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 #
 # Enable APT repositories and install python openstack client
 #

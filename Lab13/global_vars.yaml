@@ -36,7 +36,7 @@ ovs_bridge_mappings: "physnet:br-phys"
 ovs_tunnel_types: "vxlan"
 # Public interface on the network node to which our iptables configuration will route
 # traffic 
-router_public_interface: "enp0s3"
+router_public_interface: "eth3"
 # As we realize the network that Neutron sees as physical network as a VXLAN network, we need
 # to tell Neutron about the lower MTU
 physical_network_mtus: "physnet:1450"

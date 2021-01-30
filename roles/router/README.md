@@ -24,7 +24,7 @@ Role Variables
 
 The following variables need to be set when calling this role.
 
-* public_interface - the public interface of the network node, typically something like enp0s3
+* public_interface - the public interface of the network node, typically something like eth3
 * internal_interface - the internal interface to use
 * internal_ip_address - the IP address to be used for the br-ext interface, including CIDR. This will typically be the gateway CIDR of a flat network on br-phys
 

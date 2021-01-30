@@ -9,7 +9,7 @@ install_user: vagrant
 install_user_home: "/home/vagrant"
 # Name of the unnamed device (i.e. with no IP address assigned) that we will
 # use for the VM network
-vm_network_device: enp0s9
+vm_network_device: eth2
 # The name of the SSH key that we will create and use for the virtual
 # machines spawned by OpenStack
 ssh_key_name: demo-key
@@ -17,7 +17,7 @@ ssh_key_name: demo-key
 # to connect to the physical network interfaces
 phys_bridge_name: br-phys
 # The interface which we attach to this bridge to provide connectivity
-phys_interface: enp0s9
+phys_interface: eth2
 # The password for the MariaDB root user
 mariadb_root_password: "{{MARIADB_ROOT_PASSWORD}}"
 # Node setup

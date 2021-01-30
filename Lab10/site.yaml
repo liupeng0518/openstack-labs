@@ -106,7 +106,7 @@
   vars_files:
     global_vars.yaml
   vars:
-    public_interface: enp0s3
+    public_interface: eth3
     internal_interface: "{{phys_interface}}"
     internal_ip_address: "172.16.0.1/24"
     internal_interface_mtu: 1450

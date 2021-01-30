@@ -22,8 +22,8 @@ Vagrant.configure("2") do |config|
     controller.vm.network "private_network", ip: "172.16.0.2",  auto_config: false, name: 'vboxnet1'
     controller.vm.network "forwarded_port", guest: 22, host: 8222
     controller.vm.provider "virtualbox" do |v|
-      v.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
-      v.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
+      #v.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
+      #v.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
       v.memory = 6144
       v.cpus = 2
     end
@@ -36,8 +36,8 @@ Vagrant.configure("2") do |config|
     compute1.vm.network "private_network", ip: "172.16.0.3",  auto_config: false, name: 'vboxnet1'
     compute1.vm.network "forwarded_port", guest: 22, host: 8200
     compute1.vm.provider "virtualbox" do |v|
-      v.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
-      v.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
+      #v.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
+      #v.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
       v.memory = 4096
       v.cpus = 2
     end
@@ -50,8 +50,8 @@ Vagrant.configure("2") do |config|
     compute2.vm.network "private_network", ip: "172.16.0.3",  auto_config: false, name: 'vboxnet1'
     compute2.vm.network "forwarded_port", guest: 22, host: 8201
     compute2.vm.provider "virtualbox" do |v|
-      v.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
-      v.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
+      #v.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
+      #v.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
       v.memory = 4096
       v.cpus = 2
     end
