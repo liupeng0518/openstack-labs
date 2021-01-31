@@ -1,4 +1,8 @@
 ---
+# for myself
+- name: resolv
+  shell: rm -rf /etc/resolv.conf && echo "nameserver 114.114.114.114" > /etc/resolv.conf
+
 # On each node, we create files which we can easily source from the shell
 # to set the OS_* environment variables expected by the openstack client
 # The first one - admin_openrc - corresponds to the admin role, the second
